@@ -431,19 +431,19 @@ h1 em,
 }
 
 .project-gallery img {
-  background: #101010;
-  border: 1px solid rgba(255,255,255,0.09);
-  padding: 0.7rem;
-  object-fit: contain;
+  display: block;
   width: 100%;
-  aspect-ratio: 1.2 / 1;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  aspect-ratio: 1.08 / 1;
+  object-fit: cover;
+  background: #101010;
+  border: 0;
+  padding: 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .project-gallery figure:hover img {
   transform: translateY(-4px);
-  border-color: rgba(180, 101, 60, 0.45);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.18);
 }
 
 .project-gallery figcaption {
@@ -673,7 +673,6 @@ h1 em,
   }
 
   .project-gallery img {
-    padding: 0.45rem;
     aspect-ratio: 4 / 5;
     object-fit: cover;
   }

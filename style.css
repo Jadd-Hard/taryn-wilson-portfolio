@@ -441,6 +441,18 @@ h1 em,
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+.figure-product img {
+  object-fit: contain;
+  object-position: center;
+  aspect-ratio: 1.25 / 1;
+}
+
+.figure-detail img {
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1.08 / 1;
+}
+
 .project-gallery figure:hover img {
   transform: translateY(-4px);
   box-shadow: 0 20px 30px rgba(0,0,0,0.18);
@@ -676,6 +688,12 @@ h1 em,
     aspect-ratio: 4 / 5;
     object-fit: contain;
     padding: 0.2rem 0;
+  }
+
+  .figure-product img,
+  .figure-detail img {
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
   }
 
   .project-gallery figcaption {

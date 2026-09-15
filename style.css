@@ -16,11 +16,39 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: radial-gradient(circle at top, rgba(180, 101, 60, 0.08), transparent 30%), var(--bg);
+  background: #090909;
   color: var(--text);
   font-family: "Manrope", Arial, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.01em;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at top, rgba(173, 35, 3, 0.12), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.06), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  opacity: 0.9;
+}
+
+body::after {
+  background-image:
+    repeating-radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 1px, transparent 1px, transparent 5px);
+  background-size: 120px 120px, 100% 100%, 100% 100%;
+  opacity: 0.18;
+  mix-blend-mode: screen;
 }
 
 img { display: block; width: 100%; height: 100%; }
@@ -109,6 +137,9 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: 1.1fr 0.9fr;
   gap: 4rem;
   align-items: center;
+  background: #000;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy {

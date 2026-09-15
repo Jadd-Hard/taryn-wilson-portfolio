@@ -297,9 +297,11 @@ h1 em,
 
 .statement-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 1fr;
   gap: 4rem;
   align-items: start;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .statement h2,
@@ -324,15 +326,20 @@ h1 em,
 .statement-grid > div:last-child {
   color: rgba(255,255,255,0.82);
   font-size: 1rem;
+  margin-top: 1.4rem;
+}
+
+.statement-grid > div:last-child p {
+  margin-top: 0;
 }
 
 .profile-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(16, 16, 16, 0.15);
+  gap: 2.2rem 2.5rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   grid-column: 1 / -1;
 }
 
@@ -340,6 +347,7 @@ h1 em,
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-height: 110px;
 }
 
 .profile-strip span {
@@ -351,7 +359,7 @@ h1 em,
 
 .profile-strip strong {
   font-family: "Playfair Display", serif;
-  font-size: 1.7rem;
+  font-size: clamp(2rem, 2vw, 2.5rem);
   letter-spacing: -0.05em;
 }
 
